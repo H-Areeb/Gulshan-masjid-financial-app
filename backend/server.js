@@ -7,6 +7,7 @@ require('dotenv').config();
 const authRoutes = require('./routes/auth');
 const txnRoutes = require('./routes/transactions');
 const categoryRoutes = require('./routes/categories');
+const reportRoutes = require('./routes/reports/index');
 
 const app = express();
 app.use(cors());
@@ -17,6 +18,7 @@ app.use('/uploads', express.static('uploads')); // To serve uploaded files
 app.use('/api/auth', authRoutes);
 app.use('/api/transactions', txnRoutes);
 app.use('/api/categories', categoryRoutes);
+app.use('/api/reports', reportRoutes);
 
 // DB Connect
 mongoose.connect(process.env.MONGO_URI, {
