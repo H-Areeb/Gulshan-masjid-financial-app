@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api', // Update if different
+ //baseURL: 'http://localhost:5000/api', // Update if different
+   baseURL: 'https://mosque-api.up.railway.app/api', 
   headers: {
     'Content-Type': 'application/json',
   }

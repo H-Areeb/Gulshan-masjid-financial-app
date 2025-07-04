@@ -8,7 +8,7 @@ const auth = require('../middleware/auth');
 router.get('/', auth(['admin', 'accountant', 'user']), async (req, res) => {
   try {
     const txns = await Transaction.find().sort({ date: -1 })
-    .populate('Category', 'name type')        // only fetch name and type
+    .populate('category', 'name type')        // only fetch name and type
     .populate('createdBy', 'name email');
 
     res.json({
@@ -25,7 +25,7 @@ router.get('/', auth(['admin', 'accountant', 'user']), async (req, res) => {
 router.get('/:id', auth(['admin', 'accountant', 'user']), async (req, res) => {
   try {
     const txn = await Transaction.findById(req.params.id)
-        .populate('Category', 'name type')        // only fetch name and type
+        .populate('category', 'name type')        // only fetch name and type
         .populate('createdBy', 'name email');
 
     if (!txn) {
