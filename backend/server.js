@@ -21,9 +21,10 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/reports', reportRoutes);
 
 // DB Connect
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true, useUnifiedTopology: true
-}).then(() => {
-  console.log("MongoDB Connected");
-  app.listen(5000, () => console.log("Server running on port 5000"));
-}).catch(err => console.error("DB Connection Error:", err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("✅ MongoDB Connected");
+    app.listen(5000, () => console.log("🚀 Server running on port 5000"));
+  })
+  .catch(err => console.error("❌ DB Connection Error:", err));
+

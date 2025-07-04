@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import axios from '../api/axios';
 import { useAuthStore } from '../contexts/useAuthStore';
-import { toast } from 'react-toastify';
 import { FaFacebook, FaGoogle } from 'react-icons/fa6';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -22,13 +22,13 @@ const Login = () => {
       if (res.data.success) {
         setToken(res.data.data.token);
         setUser(res.data.data.user);
-        toast.success('Login successful');
-        navigate('/');
+        toast.success(`Welcome back, ${res.data.data.user.name || 'User'}!`);
+        navigate('/dashboard');
       } else {
         toast.error(res.data.message);
       }
     } catch (err) {
-      toast.error(err.response?.data?.message || 'Login failed');
+     toast.error(err?.response?.data?.message || 'Login failed');
     }
   };
 

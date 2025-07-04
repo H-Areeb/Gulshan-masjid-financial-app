@@ -7,7 +7,10 @@ const auth = require('../middleware/auth');
 // GET all transactions
 router.get('/', auth(['admin', 'accountant', 'user']), async (req, res) => {
   try {
-    const txns = await Transaction.find().sort({ date: -1 });
+    const txns = await Transaction.find().sort({ date: -1 })
+    .populate('Category', 'name type')        // only fetch name and type
+    .populate('createdBy', 'name email');
+
     res.json({
       success: true,
       message: 'Transactions fetched successfully',
@@ -21,7 +24,10 @@ router.get('/', auth(['admin', 'accountant', 'user']), async (req, res) => {
 // GET a transaction by ID
 router.get('/:id', auth(['admin', 'accountant', 'user']), async (req, res) => {
   try {
-    const txn = await Transaction.findById(req.params.id);
+    const txn = await Transaction.findById(req.params.id)
+        .populate('Category', 'name type')        // only fetch name and type
+        .populate('createdBy', 'name email');
+
     if (!txn) {
       return res.status(404).json({ success: false, message: 'Transaction not found' });
     }

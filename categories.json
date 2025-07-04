@@ -1,0 +1,18 @@
+[
+  { "name": "Friday Donation", "type": "income" },
+  { "name": "Donation Box", "type": "income" },
+  { "name": "Donation Book", "type": "income" },
+  { "name": "Sadaqah", "type": "income" },
+  { "name": "General Fund", "type": "income" },
+  { "name": "Construction Fund", "type": "income" },
+  { "name": "Electricity Bill", "type": "expense" },
+  { "name": "Gas Bill", "type": "expense" },
+  { "name": "Imam Salary", "type": "expense" },
+  { "name": "Muazzin Salary", "type": "expense" },
+  { "name": "Generator Expense", "type": "expense" },
+  { "name": "Cleaning Supplies", "type": "expense" },
+  { "name": "Repair & Maintenance", "type": "expense" },
+  { "name": "Events & Programs", "type": "expense" },
+  { "name": "Stationery", "type": "expense" },
+  { "name": "Miscellaneous", "type": "expense" }
+]
