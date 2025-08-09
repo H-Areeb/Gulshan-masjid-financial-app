@@ -6,6 +6,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import RoleRoute from "./routes/RoleRoute";
 import TransactionForm from "./pages/transactions/TransactionForm";
 import TransactionList from "./pages/transactions/TransactionList";
+import UploadData from "./pages/transactions/uploadData";
 
 function App() {
   return (
@@ -29,6 +30,14 @@ function App() {
           element={
             <RoleRoute allowedRoles={["admin", "accountant"]}>
               <TransactionForm />
+            </RoleRoute>
+          }
+        />
+        <Route
+          path="/transactions/uploadData"
+          element={
+            <RoleRoute allowedRoles={["admin"]}>
+              <UploadData />
             </RoleRoute>
           }
         />
