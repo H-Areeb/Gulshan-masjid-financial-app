@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Gulshan-masjid-financial-app/static/css/main.abc721c1.css",
+    "main.js": "/Gulshan-masjid-financial-app/static/js/main.12644613.js",
+    "static/js/239.ad40150f.chunk.js": "/Gulshan-masjid-financial-app/static/js/239.ad40150f.chunk.js",
+    "static/js/977.b584b783.chunk.js": "/Gulshan-masjid-financial-app/static/js/977.b584b783.chunk.js",
+    "static/js/455.b1a729c2.chunk.js": "/Gulshan-masjid-financial-app/static/js/455.b1a729c2.chunk.js",
+    "static/js/453.54292a4b.chunk.js": "/Gulshan-masjid-financial-app/static/js/453.54292a4b.chunk.js",
+    "static/media/masjid-logo.png": "/Gulshan-masjid-financial-app/static/media/masjid-logo.82a18fedd4a4241c1b23.png",
+    "static/media/masjid-logo2.png": "/Gulshan-masjid-financial-app/static/media/masjid-logo2.b85450bdb97d63f094dd.png",
+    "index.html": "/Gulshan-masjid-financial-app/index.html",
+    "main.abc721c1.css.map": "/Gulshan-masjid-financial-app/static/css/main.abc721c1.css.map",
+    "main.12644613.js.map": "/Gulshan-masjid-financial-app/static/js/main.12644613.js.map",
+    "239.ad40150f.chunk.js.map": "/Gulshan-masjid-financial-app/static/js/239.ad40150f.chunk.js.map",
+    "977.b584b783.chunk.js.map": "/Gulshan-masjid-financial-app/static/js/977.b584b783.chunk.js.map",
+    "455.b1a729c2.chunk.js.map": "/Gulshan-masjid-financial-app/static/js/455.b1a729c2.chunk.js.map",
+    "453.54292a4b.chunk.js.map": "/Gulshan-masjid-financial-app/static/js/453.54292a4b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abc721c1.css",
+    "static/js/main.12644613.js"
+  ]
+}
